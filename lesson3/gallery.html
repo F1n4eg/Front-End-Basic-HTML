@@ -10,7 +10,19 @@
         <main>
             <h1>Beauty of Nature Picture</h1>
             <div id="picture">
-                
+                <picture>
+                    <!-- For screens up to 480px -->
+                    <source media="(max-width: 480px)" srcset="img/pic1.jpg">
+            
+                    <!-- For screens up to 780px -->
+                    <source media="(max-width: 780px)" srcset="img/pic2.jpg">
+            
+                    <!-- For screens up to 1024px -->
+                    <source media="(max-width: 1024px)" srcset="img/pic3.jpg">
+            
+                    <!-- Default image for screens larger than 1024px -->
+                    <img src="img/pic4.jpg" alt="Beauty of Nature">
+                </picture>
             </div>
         </main>
     </body>
