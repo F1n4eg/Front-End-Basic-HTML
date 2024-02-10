@@ -28,60 +28,86 @@
                 <h3>Contact Info</h3>
 
                 <p>
-                    Full Name:
-                    <input type="text">
+                    <label>Full Name:
+                        <input type="text" name="full-name"> 
+                    </label>
                 </p>
 
                 <p>
-                    Address:
-                    <input type="text">
+                    <label>Address:
+                        <input type="text" name="address">
+                    </label>
                 </p>
 
                 <p>
-                    Email:
-                    <input type="text">
+                    <label>Email:
+                        <input type="email" name="email">
+                    </label>
                 </p>
             </section>
 
             <section id="about">
                 <h3>About</h3>
+                <fieldset>
+                    <legend>University Degree</legend>
+                    <ul>
+                        <li>
+                            <label>
+                                Military
+                                <input type="radio" name="degree" value="military">
+                            </label>
+                        </li>
+    
+                        <li>
+                            <label>
+                                Technical
+                                <input type="radio" name="degree" value="technical">
+                            </label>
+                        </li>
+    
+                        <li>
+                            <label>
+                                Student
+                                <input type="radio" name="degree" value="student">
+                            </label>
+                        </li>
+                    </ul>
 
-                <ul>
-                    <li>
-                        <label>
-                            Military
-                            <input type="text">
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            Technical
-                            <input type="text">
-                        </label>
-                    </li>
-
-                    <li>
-                        <label>
-                            Student
-                            <input type="text">
-                        </label>
-                    </li>
-                </ul>
-
+                </fieldset>
+                
                 <p id="bio-p">
-
-                </p>
+                    <label for="bio">BIO</label>
+                    
+                    <textarea name="bio" id="bio">
+                        
+                    </textarea>
+                </p>    
+                
             </section>
 
             <section id="participation-details">
                 <h3>Participation details</h3>
 
+                <details>
+                    <summary>More info</summary>
+                    <p>Please, provide information about your preferences. We don't guarantee them, but we will try.</p>
+                </details>
+
                 <p id="uniform-color-p">
-                
+                    <label for="uniform-color">Uniform color</label>
+                    <input type="color" id="uniform-color" name="uniform-color">
                 </p>
+                
 
                 <p id="preferred-mission-role-p">
+                    <label for="preferred-mission-role">Preferred Role in a mission</label>
+                        <input name="preferred-mission-role" type="text" id="preferred-mission-role">
+                        <datalist>
+                            <option value="Pilot"></option>
+                            <option value="Doctor"></option>
+                            <option value="Scientist"></option>
+                            <option value="Experimentator"></option>
+                        </datalist>
                     
                 </p>
             </section>
@@ -90,7 +116,12 @@
             </p>
             
             <section id="agree-and-submit">
-
+                <label>
+                    I agree on terms and conditions.
+                    <input type="checkbox" name="user-agree">
+                    
+                </label>
+                <button type="submit">Send your data to NASA</button>
             </section>
         </form>
     </body>
